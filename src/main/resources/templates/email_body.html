@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title th:text="${subject}"></title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+
+<body>
+
+<p style="font-style: italic;">Automated Incident Email</p>
+
+<table>
+
+  <tr>
+    <th>Incident Time</th>
+    <th>API Name</th>
+    <th>Incident Content</th>
+  </tr>
+  <tr>
+    <td><p th:text="${reportedOn}"></p></td>
+    <td><p th:text="${API}"></p></td>
+    <td><p th:text="${message}"></p></td>
+  </tr>
+</table>
+
+</body>
+</html>
